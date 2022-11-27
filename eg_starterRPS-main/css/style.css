@@ -1,22 +1,29 @@
 body {
   width: 65%;
   margin: auto;
-  background-color: #EDEDED;
+  background-color: rgb(74, 100, 70)
+
 }
-h1, h2 {
+h2 {
   text-align: center;
+  font-family:'Staatliches', cursive; 
+  color:#5a6970;
+  font-size: 30px;
 }
 .result{
   position: relative;
   text-align: center;
   font-size: 50px;
+  font-family: 'Staatliches', cursive;
+  color: #c3cbd1;
+
   
 }
 section {
   border: 2px solid #333;
   margin: 1rem 0;
   padding: 1rem;
-  background-color: #FFF;
+  background-color:#93aca0;
 }
 main {
   display: grid;
@@ -44,14 +51,11 @@ main section {
   opacity: 100%;
 }
 section.scoreboard {
-  border-style: dashed;
+  border-style:groove;
   display: grid;
   grid-template-columns: 1fr 1fr;
   grid-gap: 1rem;
-}
-@media screen and (max-width: 768px)  {
-  main {grid-template-columns: 1fr;}
-  main img {transform: scale(.9);}
+
 }
 #result {
   border-bottom: 2px dotted #AAA;
@@ -66,12 +70,50 @@ section.scoreboard {
   align-items: center;
 }
 #pscore, #oscore {
-  font-size: 2rem;
-  font-weight: 800;
+  font-size: 5rem;
+  font-weight: 700;
   line-height: 1;
-  margin-bottom: .25rem;
+  font-family: 'Staatliches', cursive;
+
 }
 p.label {
-  line-height: 1;
+  line-height: .50;
   margin-top: 0;
+  font-size: 30px;
+  font-family: 'Staatliches', cursive;
+  color:#41474b;
+}
+@font-face {
+  font-family: 'Rocher';
+  src: url(https://assets.codepen.io/9632/RocherColorGX.woff2);
+}
+.header {
+  font-family: 'Rocher';
+  position: relative;
+  text-align: center;
+  font-size: 50px;
+  height: 100px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+h1 {
+  margin: 0;
+}
+
+@font-palette-values --Grays {
+  font-family: Rocher;
+  base-palette: 9;
+}
+
+.grays {
+  font-palette: --Grays;
+}
+
+@media screen and (max-width: 768px)  {
+  main {grid-template-columns: 1fr;}
+  main img {transform: scale(.9);}
 }
